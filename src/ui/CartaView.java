@@ -12,24 +12,28 @@ import javafx.scene.text.Text;
  * Rappresentazione grafica di una singola carta da gioco.
  * Mostra simbolo del seme, rango e colore corretto (rosso/nero).
  */
-public class CartaView extends StackPane {
+public class CartaView extends StackPane
+{
 
     private static final double CARD_WIDTH  = 80;
     private static final double CARD_HEIGHT = 110;
     private static final double ARC         = 10;
 
-    public CartaView(Carta carta) {
+    public CartaView(Carta carta)
+    {
         build(carta, false);
     }
 
     /** Carta coperta (retro) */
-    public CartaView() {
+    public CartaView()
+    {
         buildBack();
     }
 
     // ------------------------------------------------------------------ //
 
-    private void build(Carta carta, boolean coperta) {
+    private void build(Carta carta, boolean coperta)
+    {
         Rectangle bg = new Rectangle(CARD_WIDTH, CARD_HEIGHT);
         bg.setArcWidth(ARC);
         bg.setArcHeight(ARC);
@@ -56,7 +60,8 @@ public class CartaView extends StackPane {
         setMaxSize(CARD_WIDTH, CARD_HEIGHT);
     }
 
-    private void buildBack() {
+    private void buildBack()
+    {
         Rectangle bg = new Rectangle(CARD_WIDTH, CARD_HEIGHT);
         bg.setArcWidth(ARC);
         bg.setArcHeight(ARC);
@@ -74,7 +79,8 @@ public class CartaView extends StackPane {
 
     // ------------------------------------------------------------------ //
 
-    private String rangoLabel(Carta carta) {
+    private String rangoLabel(Carta carta)
+    {
         // usa toString() "RANGO di SEME" → prende la parte prima di " di "
         String s = carta.toString().split(" di ")[0];
         return switch (s) {
@@ -95,7 +101,8 @@ public class CartaView extends StackPane {
         };
     }
 
-    private String semeSimbolo(Carta carta) {
+    private String semeSimbolo(Carta carta)
+    {
         String s = carta.toString().split(" di ")[1];
         return switch (s) {
             case "CUORI"  -> "♥";

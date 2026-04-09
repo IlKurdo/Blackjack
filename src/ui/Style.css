@@ -4,12 +4,14 @@
    ============================================================ */
 
 /* Sfondo principale – verde feltro */
-.root-bg {
+.root-bg
+{
     -fx-background-color: #1a4a2e;
 }
 
 /* Titolo */
-.titolo {
+.titolo
+{
     -fx-text-fill: #f0d080;
     -fx-font-size: 36px;
     -fx-font-family: "Georgia";
@@ -18,7 +20,8 @@
 }
 
 /* Etichette sezione (BANCO / TU) */
-.label-sezione {
+.label-sezione
+{
     -fx-text-fill: #c8e6c9;
     -fx-font-size: 13px;
     -fx-font-family: "Georgia";
@@ -26,7 +29,8 @@
 }
 
 /* Punteggio */
-.label-punteggio {
+.label-punteggio
+{
     -fx-text-fill: #ffffff;
     -fx-font-size: 18px;
     -fx-font-family: "Georgia";
@@ -34,18 +38,21 @@
 }
 
 /* Etichetta risultato */
-.label-risultato {
+.label-risultato
+{
     -fx-font-size: 26px;
     -fx-font-family: "Georgia";
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 4, 0, 1, 1);
 }
 
-.risultato-vittoria {
+.risultato-vittoria
+{
     -fx-text-fill: #76ff76;
 }
 
-.risultato-sconfitta {
+.risultato-sconfitta
+{
     -fx-text-fill: #ff6b6b;
 }
 
@@ -56,45 +63,52 @@
 /* ---- CARTE ---- */
 
 /* Contenitore carta */
-.card {
+.card
+{
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 8, 0, 3, 3);
     -fx-cursor: default;
 }
 
 /* Sfondo carta scoperta */
-.card-bg {
+.card-bg
+{
     -fx-fill: white;
     -fx-stroke: #aaaaaa;
     -fx-stroke-width: 1;
 }
 
 /* Sfondo carta coperta */
-.card-back-bg {
+.card-back-bg
+{
     -fx-fill: #1a237e;
     -fx-stroke: #bbbbbb;
     -fx-stroke-width: 1;
 }
 
 /* Testo carta scoperta rosso */
-.card-text-red {
+.card-text-red
+{
     -fx-fill: #cc0000;
     -fx-font-family: "Georgia";
 }
 
 /* Testo carta scoperta nero */
-.card-text-black {
+.card-text-black
+{
     -fx-fill: #111111;
     -fx-font-family: "Georgia";
 }
 
 /* Testo retro carta */
-.card-back-text {
+.card-back-text
+{
     -fx-fill: #7986cb;
 }
 
 /* ---- PULSANTI ---- */
 
-.btn-azione {
+.btn-azione
+{
     -fx-background-color: #2e7d32;
     -fx-text-fill: white;
     -fx-font-size: 15px;
@@ -105,22 +119,26 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 1, 2);
 }
 
-.btn-azione:hover {
+.btn-azione:hover
+{
     -fx-background-color: #388e3c;
 }
 
-.btn-azione:pressed {
+.btn-azione:pressed
+{
     -fx-background-color: #1b5e20;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
 }
 
-.btn-azione:disabled {
+.btn-azione:disabled
+{
     -fx-background-color: #555555;
     -fx-text-fill: #999999;
     -fx-cursor: default;
 }
 
-.btn-nuova {
+.btn-nuova
+{
     -fx-background-color: #b71c1c;
     -fx-text-fill: white;
     -fx-font-size: 15px;
@@ -131,10 +149,12 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 1, 2);
 }
 
-.btn-nuova:hover {
+.btn-nuova:hover
+{
     -fx-background-color: #c62828;
 }
 
-.btn-nuova:pressed {
+.btn-nuova:pressed
+{
     -fx-background-color: #7f0000;
 }

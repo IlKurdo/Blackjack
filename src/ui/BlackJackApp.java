@@ -8,7 +8,8 @@ public class BlackJackApp extends Application
 {
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)
+    {
         BlackJackController controller = new BlackJackController();
         Scene scene = new Scene(controller.getRoot(), 1000, 700);
         scene.getStylesheets().add(getClass().getResource("/ui/style.css").toExternalForm());
@@ -19,7 +20,8 @@ public class BlackJackApp extends Application
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         launch(args);
     }
 }

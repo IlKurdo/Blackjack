@@ -43,19 +43,22 @@ public class BlackJackController
 
     // ------------------------------------------------------------------ //
 
-    public BlackJackController() {
+    public BlackJackController()
+    {
         costruisciUI();
         configuraAzioni();
         iniziaRound();
     }
 
-    public BorderPane getRoot() {
+    public BorderPane getRoot()
+    {
         return root;
     }
 
     // ------------------------------------------------------------------ //
 
-    private void costruisciUI() {
+    private void costruisciUI()
+    {
         root.getStyleClass().add("root-bg");
         root.setPrefSize(1000, 700);
 
@@ -110,13 +113,15 @@ public class BlackJackController
         root.setBottom(pulsanti);
     }
 
-    private void configuraAzioni() {
+    private void configuraAzioni()
+    {
         btnPesca.setOnAction(e -> {
             partita.giocatorePesca();
             aggiornaCarteGiocatore();
             int punteggio = partita.getManoGiocatore().calcolaPunteggio();
             labelPunteggioGiocatore.setText("Tu: " + punteggio);
-            if (punteggio > 21) {
+            if (punteggio > 21)
+            {
                 finePartita();
             }
         });
@@ -128,7 +133,8 @@ public class BlackJackController
 
     // ------------------------------------------------------------------ //
 
-    private void iniziaRound() {
+    private void iniziaRound()
+    {
         partita.iniziaNuovoRound();
 
         areaCroupier.getChildren().clear();
@@ -153,42 +159,53 @@ public class BlackJackController
         labelPunteggioCroupier.setText("Banco: ?");
     }
 
-    private void aggiornaCarteGiocatore() {
+    private void aggiornaCarteGiocatore()
+    {
         areaGiocatore.getChildren().clear();
-        for (Carta c : partita.getManoGiocatore().getCarteInMano()) {
+        for (Carta c : partita.getManoGiocatore().getCarteInMano())
+        {
             CartaView cv = new CartaView(c);
             animaEntrata(cv);
             areaGiocatore.getChildren().add(cv);
         }
     }
 
-    private void finePartita() {
+    private void finePartita()
+    {
         btnPesca.setDisable(true);
         btnStai.setDisable(true);
 
         // Turno croupier (solo se il giocatore non ha sballato)
-        if (partita.getManoGiocatore().calcolaPunteggio() <= 21) {
+        if (partita.getManoGiocatore().calcolaPunteggio() <= 21)
+        {
             partita.turnoCroupier();
         }
 
         // Mostra tutte le carte del croupier
         areaCroupier.getChildren().clear();
-        for (Carta c : partita.getManoCroupier().getCarteInMano()) {
+        for (Carta c : partita.getManoCroupier().getCarteInMano())
+        {
             CartaView cv = new CartaView(c);
             animaEntrata(cv);
             areaCroupier.getChildren().add(cv);
         }
+
         labelPunteggioCroupier.setText("Banco: " + partita.getManoCroupier().calcolaPunteggio());
 
         // Mostra risultato
         String esito = partita.determinaVincitore();
         labelRisultato.setText(esito);
 
-        if (esito.equals("Hai vinto!") || esito.equals("Il Banco ha sballato! Hai vinto")) {
+        if (esito.equals("Hai vinto!") || esito.equals("Il Banco ha sballato! Hai vinto"))
+        {
             labelRisultato.getStyleClass().add("risultato-vittoria");
-        } else if (esito.equals("Pareggio!")) {
+        }
+        else if (esito.equals("Pareggio!"))
+        {
             labelRisultato.getStyleClass().add("risultato-pareggio");
-        } else {
+        }
+        else
+        {
             labelRisultato.getStyleClass().add("risultato-sconfitta");
         }
     }
@@ -196,7 +213,8 @@ public class BlackJackController
     // ------------------------------------------------------------------ //
 
     /** Animazione di entrata per ogni carta (scivola dall'alto con fade) */
-    private void animaEntrata(CartaView cv) {
+    private void animaEntrata(CartaView cv)
+    {
         cv.setOpacity(0);
 
         FadeTransition fade = new FadeTransition(Duration.millis(400), cv);
