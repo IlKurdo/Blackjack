@@ -1,0 +1,140 @@
+/* ============================================================
+   BlackJack – JavaFX Stylesheet
+   Tema: tavolo da casinò verde scuro, carte bianche classiche
+   ============================================================ */
+
+/* Sfondo principale – verde feltro */
+.root-bg {
+    -fx-background-color: #1a4a2e;
+}
+
+/* Titolo */
+.titolo {
+    -fx-text-fill: #f0d080;
+    -fx-font-size: 36px;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 6, 0, 2, 2);
+}
+
+/* Etichette sezione (BANCO / TU) */
+.label-sezione {
+    -fx-text-fill: #c8e6c9;
+    -fx-font-size: 13px;
+    -fx-font-family: "Georgia";
+    -fx-letter-spacing: 2px;
+}
+
+/* Punteggio */
+.label-punteggio {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+}
+
+/* Etichetta risultato */
+.label-risultato {
+    -fx-font-size: 26px;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 4, 0, 1, 1);
+}
+
+.risultato-vittoria {
+    -fx-text-fill: #76ff76;
+}
+
+.risultato-sconfitta {
+    -fx-text-fill: #ff6b6b;
+}
+
+.risultato-pareggio {
+    -fx-text-fill: #ffd740;
+}
+
+/* ---- CARTE ---- */
+
+/* Contenitore carta */
+.card {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 8, 0, 3, 3);
+    -fx-cursor: default;
+}
+
+/* Sfondo carta scoperta */
+.card-bg {
+    -fx-fill: white;
+    -fx-stroke: #aaaaaa;
+    -fx-stroke-width: 1;
+}
+
+/* Sfondo carta coperta */
+.card-back-bg {
+    -fx-fill: #1a237e;
+    -fx-stroke: #bbbbbb;
+    -fx-stroke-width: 1;
+}
+
+/* Testo carta scoperta rosso */
+.card-text-red {
+    -fx-fill: #cc0000;
+    -fx-font-family: "Georgia";
+}
+
+/* Testo carta scoperta nero */
+.card-text-black {
+    -fx-fill: #111111;
+    -fx-font-family: "Georgia";
+}
+
+/* Testo retro carta */
+.card-back-text {
+    -fx-fill: #7986cb;
+}
+
+/* ---- PULSANTI ---- */
+
+.btn-azione {
+    -fx-background-color: #2e7d32;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Georgia";
+    -fx-padding: 10 28 10 28;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 1, 2);
+}
+
+.btn-azione:hover {
+    -fx-background-color: #388e3c;
+}
+
+.btn-azione:pressed {
+    -fx-background-color: #1b5e20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);
+}
+
+.btn-azione:disabled {
+    -fx-background-color: #555555;
+    -fx-text-fill: #999999;
+    -fx-cursor: default;
+}
+
+.btn-nuova {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Georgia";
+    -fx-padding: 10 28 10 28;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 1, 2);
+}
+
+.btn-nuova:hover {
+    -fx-background-color: #c62828;
+}
+
+.btn-nuova:pressed {
+    -fx-background-color: #7f0000;
+}
