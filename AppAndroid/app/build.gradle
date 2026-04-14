@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'it.scuola.blackjack'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "it.scuola.blackjack"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+}
