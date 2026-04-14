@@ -4,18 +4,16 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class BlackJackApp extends Application
-{
+public class BlackJackApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         BlackJackController controller = new BlackJackController();
-        Scene scene = new Scene(controller.getRoot(), 1000, 700);
-        scene.getStylesheets().add(getClass().getResource("/ui/style.css").toExternalForm());
-
-        primaryStage.setTitle("BlackJack");
+        // Finestra un po' più piccola e semplice
+        Scene scene = new Scene(controller.getRoot(), 800, 600);
+        
+        primaryStage.setTitle("Il mio gioco del Blackjack");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
