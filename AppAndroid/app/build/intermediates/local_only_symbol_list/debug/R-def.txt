@@ -1,0 +1,10 @@
+R_DEF: Internal format may change without notice
+local
+id btnNuova
+id btnPesca
+id btnStai
+id tvCarteBanco
+id tvCarteGiocatore
+id tvRisultato
+layout activity_main
+string app_name

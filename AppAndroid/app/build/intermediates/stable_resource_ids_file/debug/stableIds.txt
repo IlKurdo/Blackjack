@@ -1,0 +1,8 @@
+it.scuola.blackjack:string/app_name = 0x7f030000
+it.scuola.blackjack:layout/activity_main = 0x7f020000
+it.scuola.blackjack:id/btnPesca = 0x7f010001
+it.scuola.blackjack:id/tvCarteGiocatore = 0x7f010004
+it.scuola.blackjack:id/tvCarteBanco = 0x7f010003
+it.scuola.blackjack:id/tvRisultato = 0x7f010005
+it.scuola.blackjack:id/btnStai = 0x7f010002
+it.scuola.blackjack:id/btnNuova = 0x7f010000
