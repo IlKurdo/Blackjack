@@ -14,7 +14,6 @@
 ## Regole del gioco
 
 - Le carte numerate valgono il loro valore nominale (2-10).
-- Le figure (Fante, Regina, Re) valgono 10.
 - L'Asso vale 1 o 11, a seconda di quale sia più vantaggioso.
 - Un "Blackjack" è ottenuto con un Asso e una carta da 10 punti (punteggio totale 21).
 
@@ -25,4 +24,6 @@
 3. Apri un terminale o prompt dei comandi.
 4. Naviga nella directory dove hai salvato il file.
 5. Esegui il comando: `python blackjack.py`
+
+Per avviare la verisione **Android** serve un emulatore (Android Studio) e selezionando solo la cartella **AppAndroid**
 
